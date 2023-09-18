@@ -1,0 +1,75 @@
+.examples
+    background-image: url('../../img/examples-bg.png')
+    background-size: 100% 85%
+    background-repeat: no-repeat
+    &__wrapper
+        display: flex
+        width: 90%
+        max-width: 1400px
+        margin: auto
+        padding-top: 100px
+        padding-bottom: 100px 
+        align-items: center
+        justify-content: center
+    &__article
+        display: flex
+        flex-direction: column
+        gap: 30px
+        h2
+            font-weight: 700
+            font-size: 36px
+            font-family: Cardo
+            color: white
+        p
+            font-size: 24px
+            font-weight: 700
+            font-family: Cardo
+            color: #FFD502
+        a
+            color: white
+            background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+            max-width: 253px
+            width: 100%
+            display: flex
+            margin-top: 50px
+            justify-content: center
+            border-radius: 12px
+            padding: 17.5px 0
+            font-size: 18px
+            font-weight: 800
+            font-family: Nunito Sans
+            transition: .3s all 
+            margin-bottom: 200px
+            &:hover
+                cursor: pointer
+                background-position: 253px
+        div
+            display: flex
+            svg
+                position: relative
+                top: -30px
+                left: -102%
+    &__image
+        width: 70%
+        max-width: 646px
+        height: 70%
+        max-height: 442px
+@media (max-width:994px)
+    .examples
+        background-size: 100% 94%
+        &__wrapper
+            flex-direction: column
+        &__article
+            text-align: center
+            a
+                margin: auto
+                margin-bottom: 100px
+            div
+                svg
+                    left: -98%
+@media (max-width:368px)
+    .examples
+        &__article
+            div
+                svg
+                    left: -80%

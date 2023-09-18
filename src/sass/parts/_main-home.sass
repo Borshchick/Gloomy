@@ -1,0 +1,101 @@
+.main-home
+    &__video
+        position: absolute
+        object-fit: cover
+        height: 100%
+    &__tittle-wrapper
+        svg
+            position: relative
+            top: 100px
+            right: 50%
+    &__wrapper
+        text-align: center
+        width: 100%
+        max-width: 1010px
+        margin: auto
+        position: relative
+        z-index: 2
+    &__content
+        position: relative
+    &__tittle
+        font-family: Cardo
+        font-weight: 400
+        font-size: 74px
+        color: white
+        padding-top: 100px
+        span
+            color: #F2CA00
+    &__text
+        font-size: 24px
+        font-family: Nunito Sans
+        font-weight: 400
+        color: #F2CA00
+    &__button
+        color: white
+        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+        max-width: 253px
+        width: 100%
+        display: flex
+        margin: auto
+        margin-top: 50px
+        justify-content: center
+        border-radius: 12px
+        padding: 17.5px 0
+        font-size: 18px
+        font-weight: 800
+        font-family: Nunito Sans
+        transition: .3s all 
+        margin-bottom: 200px
+        &:hover
+            cursor: pointer
+            background-position: 253px
+    &__data-wrapper
+        display: flex
+        color: #F2CA00
+        font-size: 40px
+        font-family: Cardo
+        font-weight: 700
+        gap: 140px
+        width: 100%
+        max-width: 990px
+        margin: auto
+        position: relative
+        z-index: 2
+    &__data-text
+        color: white
+        font-size: 20px
+        text-align: center
+    &__data
+        text-align: center
+        margin-bottom: 100px
+@media (max-width:994px) and (min-width: 600px)
+    .main-home
+        &__tittle
+            font-size: 60px
+        &__text
+            font-size: 20px
+        &__button
+            margin-bottom: 100px
+        &__data-wrapper
+            width: 50%
+            justify-content: center
+            
+        &__data-text
+            font-size: 16px
+        &__data
+            font-size: 20px
+@media (max-width: 600px)
+    .main-home
+        // background-position: center -130px
+        // padding: 50px 0 200px 0
+        // &__video
+        //     height: 250vh
+        &__tittle
+            font-size: 40px
+        &__text
+            margin-top: 20px
+            font-size: 25px
+        &__data-wrapper
+            margin-bottom: 100px
+            flex-direction: column
+            gap: 10px

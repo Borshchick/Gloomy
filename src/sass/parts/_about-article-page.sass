@@ -1,0 +1,72 @@
+.article
+    background-image: url('../../img/lines-bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    padding-top: 50px 
+    &__line-wrapper
+        background-image: url('../../img/quotes.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        padding: 100px 0
+    &__line
+        width: 100%
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
+        border: 2px solid white
+        border-right: none
+        border-left: none
+    &__line-text
+        width: 95%
+        max-width: 1200px
+        margin: auto
+        display: flex
+        padding: 40px
+    &__text-tittle
+        font-family: Cardo
+        font-size: 36px
+        font-weight: 700
+        width: 100%
+        max-width: 335px
+        margin: auto
+    &__line-text-wrapper
+        display: flex
+        flex-direction: column
+        gap: 20px
+        justify-content: center
+        width: 100%
+        max-width: 554px
+        margin: auto
+        p
+            font-size: 20px
+            font-weight: 400
+            font-family: Nunito Sans
+    &__second-text
+        width: 95%
+        max-width: 905px
+        margin: auto
+        margin-top: 50px
+        text-align: center
+        h2
+            margin-bottom: 40px
+            font-family: Cardo
+            font-size: 36px
+            font-weight: 700
+        p
+            font-family: Nunito Sans
+            font-size: 26px
+            font-weight: 400
+            padding-bottom: 120px
+@media (max-width: 994px) and (min-width: 725px)
+    .article
+        &__line-text
+            width: 90%
+@media (max-width: 725px)
+    .article
+        &__line-wrapper
+            background-image: none
+        &__line-text
+            flex-direction: column
+            gap: 30px
+            width: 75%
+
+

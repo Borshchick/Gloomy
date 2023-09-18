@@ -1,0 +1,184 @@
+.valid-border
+    border: 1px solid green !important
+    background: rgba(75, 157, 72, 0.286) !important
+.error-input
+    border: 1px solid red !important
+    background: rgba(157, 72, 72, 0.426) !important
+.error-message
+    font-size: 18px
+    font-weight: 600
+    font-family: Nunito Sans
+    color: red
+.error-check
+    font-size: 18px
+    font-weight: 600
+    font-family: Nunito Sans
+    color: red
+.error-second-check
+    font-size: 18px
+    font-weight: 600
+    font-family: Nunito Sans
+    color: red
+#email-error
+    font-size: 18px
+    font-weight: 600
+    font-family: Nunito Sans
+    color: red
+.form-page
+    padding-bottom: 70px 
+    &__text
+        width: 90%
+        max-width: 1200px
+        margin: auto
+        text-align: start
+        h2
+            font-size: 36px
+            font-family: Cardo
+            font-weight: 700
+            margin-bottom: 30px
+        p
+            font-size: 26px
+            font-weight: 400
+            font-family: Nunito Sans
+            margin-bottom: 50px
+        svg
+            position: relative
+            top: -25px
+    &__form-wrapper
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 33.85%, rgba(255, 255, 255, 0) 75.52%, #FFFFFF 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94))
+        width: 80%
+        max-width: 844px
+        margin: auto
+        padding: 30px 0
+        border-radius: 62px
+    &__form-content-wrapper
+        width: 80%
+        margin: auto
+        h5
+            font-size: 20px
+            font-weight: 600
+            font-family: Nunito Sans
+            margin-bottom: 30px
+            span
+                color: #FF02E6
+    &__check
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 20px
+        label
+            font-size: 18px
+            font-weight: 500
+            font-family: Nunito Sans
+            margin-left: 8px
+            span
+                font-weight: 700
+    &__personal-info
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 30px
+    &__personal-info-wrapper
+        display: flex
+        flex-direction: column-reverse
+        input
+            width: 100%
+            max-width: 621px
+            background: #E6E8EB
+            border: none
+            outline: none
+            padding: 20px 0px 20px 20px
+            border-radius: 13px
+            font-size: 16px
+            font-weight: 600
+            font-family: Nunito Sans
+            &::placeholder
+                color: #878787
+                font-size: 16px
+                font-weight: 600
+                font-family: Nunito Sans
+        label
+            font-size: 18px
+            font-weight: 600
+            font-family: Nunito Sans
+            span
+                color: #FF02E6
+    &__second-check-wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr) 
+        gap: 17px
+        margin-bottom: 30px
+    &__second-check
+        label
+            font-size: 18px
+            font-weight: 600
+            font-family: Nunito Sans
+            margin-left: 8px
+    &__answer-wrapper
+        input
+            width: 100%
+            max-width: 621px
+            background: #E6E8EB
+            border: none
+            outline: none
+            padding: 20px 20px
+            border-radius: 13px
+            margin-top: 20px
+            font-size: 16px
+            font-weight: 600
+            font-family: Nunito Sans
+            &::placeholder
+                color: #878787
+                font-size: 16px
+                font-weight: 600
+                font-family: Nunito Sans
+        label
+            font-size: 20px
+            font-weight: 600
+            font-family: Nunito Sans
+            
+        span
+            color: #FF02E6
+    &__submit-button
+        color: white
+        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+        max-width: 253px
+        width: 100%
+        display: flex
+        margin: auto
+        justify-content: center
+        border-radius: 12px
+        padding: 17.5px 0
+        font-size: 18px
+        font-weight: 800
+        font-family: Nunito Sans
+        transition: .3s all
+        border: none
+        margin-top: 40px
+        &:hover
+            cursor: pointer
+            background-position: 253px
+@media (max-width: 753px) and (min-width: 650px)
+    .form-page
+        &__personal-info-wrapper
+            input
+                padding-right: 0
+        &__second-check-wrapper
+            grid-template-columns: repeat(2, 1fr)
+            align-items: center
+@media (max-width: 650px)
+    .form-page
+        &__form-wrapper
+            width: 95%
+        &__personal-info-wrapper
+            input
+                width: 92%
+                padding-right: 0 
+        &__second-check-wrapper
+            grid-template-columns: repeat(2, 1fr)
+            align-items: center
+            width: 100%
+        &__answer-wrapper
+            input
+                width: 90%
+                padding-right: 0

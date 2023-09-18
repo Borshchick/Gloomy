@@ -1,0 +1,188 @@
+.packages
+    background-image: url('../../img/lines-bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    &__cards-tittle
+        font-family: Cardo
+        font-weight: 700
+        font-size: 36px
+        margin: 30px 0 50px 0
+    &__cards-wrapper
+        width: 90%
+        max-width: 1400px
+        margin: auto
+        margin-bottom: 80px
+    &__cards
+        display: flex
+        gap: 40px
+        justify-content: center
+        margin: auto
+    &__card
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 33.85%, rgba(255, 255, 255, 0) 75.52%, #FFFFFF 100%),linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
+        border: 2px solid white
+        width: 100%
+        max-width: 392px
+        padding: 20px 30px
+        border-radius: 62px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:hover
+            transform: translateY(-2%) !important
+            cursor: pointer
+        h2:nth-child(1)
+            font-family: Cardo
+            font-size: 36px
+            font-weight: 700
+            text-align: center
+        a:nth-last-child(1)
+            font-family: Nunito Sans
+            font-size: 18px
+            font-weight: 700
+            margin-top: 20px
+            border-radius: 56px !important
+            width: 100%
+            max-width: 253px
+            padding: 9px 0
+        div:nth-child(2)
+            margin-top: -45px
+    &__first-card-count
+        color: #A8A8A8
+    &__second-card-count
+        color: #FFD502
+        font-family: Cardo
+        font-size: 36px
+        font-weight: 700
+        text-align: center
+    &__third-card-count
+        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%)
+        background-clip: text
+        -webkit-background-clip: text
+        color: transparent
+    &__card-tittle
+        font-size: 32px
+        font-weight: 700
+        font-family: Cardo
+    &__card-list
+        margin: 25px 0 150px 0
+        display: flex
+        flex-direction: column
+        gap: 15px
+        li
+            list-style: none
+            img
+                margin-right: 5px
+    &__button-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        flex-wrap: wrap
+    &__card-button-tittle
+        font-size: 20px
+        font-weight: 700
+        font-family: Nunito Sans
+    &__first-card-button
+        position: relative
+        background: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%,)
+        text-align: center
+        transition: .3s all
+        border-radius: 56px
+        padding: 0 !important
+        div
+            border-radius: 56px
+            margin: auto
+            margin: 2px
+            padding: 9px 0
+            background: white
+        &:hover
+            cursor: pointer
+            background-position: -253px
+    &__second-card-wrapper
+        margin-top: -63px
+    &__second-card-button
+        background: #FFD502
+        transition: all .3s ease
+        &:hover
+            cursor: pointer
+            background: black
+            color: #FFD502
+    &__cart-label
+        position: relative
+        top: 10px
+        left: 60%
+        border-radius: 8px
+        background: #FFFFFF
+        width: 100%
+        max-width: 176px
+        z-index: 2
+        text-align: center
+        padding: 20px 0
+        font-size: 14px
+        font-weight: 500
+        font-family: Poppins
+    &__third-card-button
+        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%)
+        color: white
+        transition: all .3s ease
+        &:hover
+            transition: all .3s
+            background-position: 253px
+            cursor: pointer
+    &__line-wrapper
+        width: 100%
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 33.85%, rgba(255, 255, 255, 0) 75.52%, #FFFFFF 100%),linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
+        border-top: 2px solid white
+        border-bottom: 2px solid white
+        margin-bottom: 70px
+    &__line
+        width: 50%
+        max-width: 500px
+        margin: auto
+        text-align: center
+        padding: 40px 0
+        display: flex
+        flex-direction: column
+        gap: 15px
+        h3
+            font-family: Cardo
+            font-size: 36px
+            font-weight: 700
+        p
+            font-family: Nunito Sans
+            font-weight: 700
+            font-size: 24px
+        a
+            color: white
+            background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+            max-width: 253px
+            width: 100%
+            display: flex
+            margin: auto
+            justify-content: center
+            border-radius: 12px
+            padding: 17.5px 0
+            font-size: 18px
+            font-weight: 800
+            font-family: Nunito Sans
+            transition: .3s all 
+            &:hover
+                cursor: pointer
+                background-position: 253px
+@media (max-width: 1270px)
+    .packages
+        &__cards
+            flex-direction: column
+            align-items: center
+            width: 80%
+            gap: 50px
+        &__line
+            width: 90%
+        &__cart-label
+            width: 100px
+            left: 76%
+
+        
+
+
+

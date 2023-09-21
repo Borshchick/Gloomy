@@ -18,18 +18,21 @@
         justify-content: center
         margin: auto
     &__card
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 33.85%, rgba(255, 255, 255, 0) 75.52%, #FFFFFF 100%),linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
-        border: 2px solid white
+        background: #ffffff98
+        backdrop-filter: blur(5px)
         width: 100%
         max-width: 392px
-        padding: 20px 30px
+        padding: 20px 0px
         border-radius: 62px
         display: flex
         flex-direction: column
         justify-content: space-between
+        transition: all .3s ease
+        border: 1.5px solid white
         &:hover
             transform: translateY(-2%) !important
             cursor: pointer
+            backdrop-filter: blur(20px)
         h2:nth-child(1)
             font-family: Cardo
             font-size: 36px
@@ -46,6 +49,11 @@
             padding: 9px 0
         div:nth-child(2)
             margin-top: -45px
+        &:nth-child(2)
+           background: #ffffff98
+           transition: all .3s ease
+           &:hover
+                backdrop-filter: blur(20px)
     &__first-card-count
         color: #A8A8A8
     &__second-card-count
@@ -63,12 +71,18 @@
         font-size: 32px
         font-weight: 700
         font-family: Cardo
+        text-align: center
     &__card-list
         margin: 25px 0 150px 0
         display: flex
         flex-direction: column
         gap: 15px
+        padding: 0px 50px 0px 65px
         li
+            font-family: Nunito Sans
+            font-weight: 400
+            font-size: 20px
+            text-indent: -20px
             list-style: none
             img
                 margin-right: 5px
@@ -82,6 +96,7 @@
         font-size: 20px
         font-weight: 700
         font-family: Nunito Sans
+        color: #A8A8A8
     &__first-card-button
         position: relative
         background: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%,)
@@ -94,7 +109,7 @@
             margin: auto
             margin: 2px
             padding: 9px 0
-            background: white
+            background: #ededed
         &:hover
             cursor: pointer
             background-position: -253px
@@ -109,7 +124,7 @@
             color: #FFD502
     &__cart-label
         position: relative
-        top: 10px
+        top: 20px
         left: 60%
         border-radius: 8px
         background: #FFFFFF
@@ -117,7 +132,7 @@
         max-width: 176px
         z-index: 2
         text-align: center
-        padding: 20px 0
+        padding: 10px 0
         font-size: 14px
         font-weight: 500
         font-family: Poppins
@@ -160,27 +175,28 @@
             display: flex
             margin: auto
             justify-content: center
-            border-radius: 12px
+            border-radius: 4px
             padding: 17.5px 0
             font-size: 18px
             font-weight: 800
             font-family: Nunito Sans
             transition: .3s all 
+            margin-top: 38px
             &:hover
                 cursor: pointer
                 background-position: 253px
 @media (max-width: 1270px)
     .packages
         &__cards
-            flex-direction: column
-            align-items: center
-            width: 80%
+            flex-wrap: wrap
+            justify-content: center
+            // width: 80%
             gap: 50px
         &__line
             width: 90%
         &__cart-label
             width: 100px
-            left: 76%
+            left: 70%
 
         
 

@@ -7,18 +7,18 @@
     background-image: url('../../img/lines-bg.png')
     background-repeat: no-repeat
     background-size: cover
+    background-position: center bottom
     &__article-wrapper
         display: flex
         align-items: center
         width: 90%
-        max-width: 1200px
+        max-width: 1260px
         margin: auto
         margin-bottom: 100px
-        img
-            width: 80%
-            max-width: 550px
-            height: 80%
-            max-height: 410px
+        gap: 60px
+    &__article
+        width: 100%
+        max-width: 661px
     &__article-tittle
         font-family: Cardo
         font-weight: 700
@@ -83,8 +83,8 @@
         display: flex
         margin: auto
         justify-content: center
-        border-radius: 12px
-        padding: 17.5px 0
+        border-radius: 4px
+        padding: 13px 0
         font-size: 18px
         font-weight: 800
         font-family: Nunito Sans
@@ -99,7 +99,8 @@
         width: 90%
         max-width: 1400px
         margin: auto
-        // margin-bottom: 50pxs
+        margin-top: 135px
+        padding-bottom: 58px
         img
             width: 80%
             max-width: 545px
@@ -118,15 +119,20 @@
         &__newsletter-wrapepr
             flex-direction: column-reverse
             img
-                margin-bottom: 0
+                width: 70%
+                max-width: 545px
+                margin: auto
             
 @media (max-width: 650px)   
     .accelerate
         &__article-wrapper
             flex-direction: column
-            width: 60%
+            width: 90%
             margin: auto
             margin-bottom: 50px
+            img
+                width: 115%
+                max-width: 557px
         &__article
             margin-bottom: 50px
         &__article-tittle
@@ -139,6 +145,5 @@
             p
                 font-size: 18px
         &__newsletter-wrapepr
-            flex-direction: column-reverse
-            img
-                margin-bottom: 0
+            flex-direction: column
+            

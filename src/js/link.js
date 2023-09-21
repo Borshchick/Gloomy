@@ -1,15 +1,13 @@
-$(document).ready(function() {
-    // Перевіряємо, чи є якірний посил в URL
-    if (window.location.hash) {
-        var target = $(window.location.hash);
-
-        // Перевіряємо, чи існує цільовий розділ
-        if (target.length) {
-            // Виконуємо плавну прокрутку навіть якщо користувач знаходиться внизу сторінки
+$(document).ready(function(){
+    // Додати обробник кліку для всіх якорних посилань
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
-            }, 3000); // Плавна прокрутка триває 1 секунду
+            }, 1000); // Плавна прокрутка триває 1 секунду
         }
-    }
+    });
 });
 

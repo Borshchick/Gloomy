@@ -27,3 +27,4 @@ function closeAllAccordionContents() {
     accordionItems.forEach((item) => item.classList.remove('active-accordion')); // Закриття всіх акордеонів
     accordionButtons.forEach((button) => button.style.color = 'white')
 }
+

@@ -13,6 +13,7 @@
         margin-top: 100px
     &__tittle-wrapper
         display: flex
+        margin-bottom: 29px
         svg
             position: relative
             top: -45px
@@ -27,18 +28,20 @@
         font-weight: 400
         width: 100%
         max-width: 636px
+        margin-bottom: 43px
     &__email-wrapper
         display: flex
         margin-top: 20px
         input[type = 'email']
             width: 100%
             max-width: 390px
+            backdrop-filter: blur(8px)
             padding: 20px
             border-radius: 12px 0 0 12px
             border: 4px solid white
             border-right: none
             font-family: Nunito Sans
-            background: #FFFFFF4D
+            background: #ffffffa8
             font-weight: 600
             font-size: 18px
             &::placeholder
@@ -47,6 +50,7 @@
                 font-size: 18px
         input[type = 'submit']
             background: #F2CA00
+            color: #4A4A4A
             width: 100%
             max-width: 270px
             border: none
@@ -57,12 +61,31 @@
             transition: all .5s ease
             &:hover
                 cursor: pointer
-                transform: scale(1.1)
+                transform: scale(1.05)
+                color: #F2CA00
+                background: black
 @media (max-width:650px)
+    .error
+        order: 2
     .newsletter
+        width: 100%
+        margin-top: 100px
+        padding-bottom: 0
+        &__tittle-wrapper
+            width: 100%
         &__email-wrapper
-                input[type = 'submit']
-                    width: 30%
-                    font-size: 10px
-                    overflow-wrap: break-word
-                    white-space: normal 
+            flex-direction: column
+            gap: 20px
+            input[type = 'email']
+                width: 80%
+                margin: auto
+                border-radius: 12px
+                border: 4px solid white
+            input[type = 'submit']
+                width: 60%
+                margin: auto
+                font-size: 15px
+                overflow-wrap: break-word
+                white-space: normal 
+                border-radius: 12px
+                padding: 9px 0

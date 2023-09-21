@@ -23,6 +23,7 @@
         font-size: 74px
         color: white
         padding-top: 100px
+        margin: auto
         span
             color: #F2CA00
     &__text
@@ -32,7 +33,7 @@
         color: #F2CA00
     &__button
         color: white
-        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+        background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%)
         max-width: 253px
         width: 100%
         display: flex
@@ -40,7 +41,7 @@
         margin-top: 50px
         justify-content: center
         border-radius: 12px
-        padding: 17.5px 0
+        padding: 13.25px 0
         font-size: 18px
         font-weight: 800
         font-family: Nunito Sans
@@ -51,7 +52,7 @@
             background-position: 253px
     &__data-wrapper
         display: flex
-        color: #F2CA00
+        color: white
         font-size: 40px
         font-family: Cardo
         font-weight: 700
@@ -65,11 +66,22 @@
         color: white
         font-size: 20px
         text-align: center
+        color: #F2CA00
     &__data
         text-align: center
         margin-bottom: 100px
-@media (max-width:994px) and (min-width: 600px)
+@media (max-width:1060px) and (min-width: 600px)
     .main-home
+        &__tittle-wrapper
+            width: 90%
+            max-width: 1009px
+            margin: auto
+            display: flex
+            svg
+                width: 70px
+                height: 70px
+                right: -5%
+                top: 50px
         &__tittle
             font-size: 60px
         &__text
@@ -86,6 +98,15 @@
             font-size: 20px
 @media (max-width: 600px)
     .main-home
+        margin-bottom: 100px
+        &__content
+            padding-bottom: 100px
+        &__tittle-wrapper
+            width: 90%
+            max-width: 1009px
+            margin: auto
+            svg
+                right: 40%
         // background-position: center -130px
         // padding: 50px 0 200px 0
         // &__video
@@ -98,4 +119,6 @@
         &__data-wrapper
             margin-bottom: 100px
             flex-direction: column
-            gap: 10px
+            gap: 100px
+        &__data
+            margin-bottom: 0

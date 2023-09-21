@@ -2,19 +2,23 @@
     background-image: url('../../img/lines-bg.png')
     background-size: cover
     background-repeat: no-repeat
-    padding-top: 50px 
+    padding-top: 50px
     &__line-wrapper
+        padding: 100px 0
         background-image: url('../../img/quotes.png')
         background-size: contain
         background-repeat: no-repeat
         background-position: center
-        padding: 100px 0
+        background-size: contain
     &__line
         width: 100%
         background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
         border: 2px solid white
         border-right: none
         border-left: none
+        display: flex
+        justify-content: center
+        align-items: center
     &__line-text
         width: 95%
         max-width: 1200px
@@ -68,5 +72,7 @@
             flex-direction: column
             gap: 30px
             width: 75%
+        &__text-tittle
+            margin: 0
 
 

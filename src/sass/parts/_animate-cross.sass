@@ -1,0 +1,135 @@
+#cross
+    animation: crossAnim 6s infinite
+
+    #cross-right
+        animation: crossRightAnim 6s infinite
+
+    #cross-left
+        animation: crossLeftAnim 6s infinite
+
+    #cross-top
+        animation: crossTopAnim 6s infinite
+    
+    #cross-bottom
+        animation: crossBottomAnim 6s infinite
+
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(crossAnim)
+    0%
+        transform: rotate(0deg)
+    20%
+        transform: rotate(0deg)
+    30%
+        transform: rotate(135deg)
+    70%
+        transform: rotate(135deg)
+    80%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(0deg)
+
++keyframes(crossRightAnim)
+    0%
+        transform: translateX(0)
+    15%
+        transform: translateX(0)         
+    20%
+        transform: translateX(-5px)
+    25%
+        transform: translateX(-5px)
+    30%
+        transform: translateX(0)
+    45%
+        transform: translateX(0)
+    65%
+        transform: translateX(0)
+    75%
+        transform: translateX(-5px)
+    80%
+        transform: translateX(-5px)
+    85%
+        transform: translateX(0)
+    100%
+        transform: translateX(0)
+
++keyframes(crossLeftAnim)
+    0%
+        transform: translateX(0)
+    15%
+        transform: translateX(0)         
+    20%
+        transform: translateX(5px)
+    25%
+        transform: translateX(5px)
+    30%
+        transform: translateX(0)
+    45%
+        transform: translateX(0)
+    65%
+        transform: translateX(0)
+    75%
+        transform: translateX(5px)
+    80%
+        transform: translateX(5px)
+    85%
+        transform: translateX(0)
+    100%
+        transform: translateX(0)
+
++keyframes(crossTopAnim)
+    0%
+        transform: translateY(0)
+    15%
+        transform: translateY(0)         
+    20%
+        transform: translateY(5px)
+    25%
+        transform: translateY(5px)
+    30%
+        transform: translateY(0)
+    45%
+        transform: translateY(0)
+    65%
+        transform: translateY(0)
+    75%
+        transform: translateY(5px)
+    80%
+        transform: translateY(5px)
+    85%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)
+
++keyframes(crossBottomAnim)
+    0%
+        transform: translateY(0)
+    15%
+        transform: translateY(0)         
+    20%
+        transform: translateY(-5px)
+    25%
+        transform: translateY(-5px)
+    30%
+        transform: translateY(0)
+    45%
+        transform: translateY(0)
+    65%
+        transform: translateY(0)
+    75%
+        transform: translateY(-5px)
+    80%
+        transform: translateY(-5px)
+    85%
+        transform: translateY(0)
+    100%
+        transform: translateY(0)

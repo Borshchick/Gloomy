@@ -7,6 +7,7 @@ const dataErrorMessages = document.querySelectorAll(".error-message");
 const emailErrorMessage = document.getElementById("email-error");
 const errorFirstCheck = document.querySelector(".error-check");
 const errorSecondCheck = document.querySelector(".error-second-check");
+const nonRequire = document.querySelector('[name = "non-require"]');
 
 function addErrorMessage() {
   dataErrorMessages.forEach((message) => {
@@ -31,13 +32,12 @@ function removeError() {
   personalDataInputs.forEach((dataInput) => {
     dataInput.value = "";
     dataInput.classList.remove("error-input");
-    dataInput.classList.add('valid-border')
-    setTimeout(function(){
-        dataInput.classList.remove('valid-border')
-    }, 2000)
+    dataInput.classList.add("valid-border");
+    setTimeout(function () {
+      dataInput.classList.remove("valid-border");
+    }, 2000);
   });
 }
-
 
 function personalDataValidate() {
   let isEmailValid = true;
@@ -46,28 +46,31 @@ function personalDataValidate() {
   personalDataInputs.forEach((dataInput) => {
     const inputType = dataInput.getAttribute("type");
     const dataValue = dataInput.value.trim();
-
-    if (inputType === "email") {
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      if (dataValue === "") {
-        isEmailValid = false;
-        emailErrorMessage.innerHTML = "Required";
-        dataInput.classList.add("error-input");
-        return;
-      } else if (!emailPattern.test(dataValue)) {
-        isEmailValid = false;
-        emailErrorMessage.innerHTML = "Invalid Email";
-        dataInput.classList.add("error-input");
-        return;
-      }
-      emailErrorMessage.innerHTML = "";
-      dataInput.classList.remove("error-input");
+    if (dataInput.getAttribute("name") === "non-require") {
+      return;
     } else {
-      if (dataValue === "") {
-        isTextDataValid = false;
-        dataInput.classList.add("error-input");
-        addErrorMessage();
-        return;
+      if (inputType === "email") {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (dataValue === "") {
+          isEmailValid = false;
+          emailErrorMessage.innerHTML = "Required";
+          dataInput.classList.add("error-input");
+          return;
+        } else if (!emailPattern.test(dataValue)) {
+          isEmailValid = false;
+          emailErrorMessage.innerHTML = "Invalid Email";
+          dataInput.classList.add("error-input");
+          return;
+        }
+        emailErrorMessage.innerHTML = "";
+        dataInput.classList.remove("error-input");
+      } else {
+        if (dataValue === "") {
+          isTextDataValid = false;
+          dataInput.classList.add("error-input");
+          addErrorMessage();
+          return;
+        }
       }
     }
   });
@@ -120,10 +123,16 @@ submitBtn.addEventListener("click", function (e) {
     removeCheck(firstCheckBoxes);
     removeCheck(secondCheckBoxes);
     removeError();
-    removeErrorMessage()
+    removeErrorMessage();
     console.log("all ok");
     return;
   } else {
     console.log("i have bad news for u");
   }
 });
+
+const formBg = document.querySelector(".pages-wrapper");
+
+if (currentPage.includes("contact-us-page.html")) {
+  formBg.style.backgroundPosition = "center 200px";
+}

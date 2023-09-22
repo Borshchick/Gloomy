@@ -1,8 +1,11 @@
+.d-none
+    display: none
 .top-line
-    background-image: url('../../img/lines-bg.png')
+    background-image: url('../../img/lines2.png')
     background-size: cover
     background-repeat: no-repeat
-    background-position: center bottom
+    background-position: center 200px
+    padding-bottom: 50px
     margin-top: 100px
     &__wrapper
         width: 90%
@@ -44,6 +47,8 @@
             border-right: none
         &:nth-child(1)
             color: black
+        &:hover
+            cursor: pointer
     &__text
         padding: 40px 70px
         font-size: 20px
@@ -152,33 +157,35 @@
 @media (max-width:1285px) and (min-width:815px)
     .top-line
         &__first-cards
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
+            // display: grid
+            // grid-template-columns: repeat(2, 1fr)
+            display: flex
+            // flex-wrap: wrap
+            justify-content: normal
         &__card
             border-bottom: 1px solid white
             border-right: none
             display: flex
             align-items: center
-            width: 60%
             text-align: center
             justify-content: center
-            margin: auto
             &:nth-child(2)
                 border-left: 1px solid white
             &:nth-child(3)
-                border-top: 1px solid white
-            &:nth-child(4)
-                width: 60%
-                border-top: 1px solid white
+                border-left: 1px solid white
         &__second-cards
             grid-template-columns: repeat(2, 1fr)
             width: 63%
+            row-gap: 10px
+        &__card-second
+            max-width: none
         &__second-tittle
             margin-top: 50px
         &__card
             border: none
         &__wide-card
             grid-row: 5
+            max-width: none
         &__partners-wrapper
             overflow-x: hidden
             position: relative
@@ -225,6 +232,7 @@
             order: 6
             width: 90%
             margin: auto
+            max-width: 301px
         &__second-tittle
             margin-top: 50px
             font-size: 20px

@@ -2,6 +2,8 @@
     background-image: url('../../img/lines-bg.png')
     background-size: cover
     background-repeat: no-repeat
+    background-position: center bottom
+    padding-bottom: 50px
     &__cards-tittle
         font-family: Cardo
         font-weight: 700
@@ -14,7 +16,7 @@
         margin-bottom: 80px
     &__cards
         display: flex
-        gap: 40px
+        gap: 20px
         justify-content: center
         margin: auto
     &__card
@@ -29,6 +31,7 @@
         justify-content: space-between
         transition: all .3s ease
         border: 1.5px solid white
+        height: 560px
         &:hover
             transform: translateY(-2%) !important
             cursor: pointer
@@ -54,6 +57,7 @@
            transition: all .3s ease
            &:hover
                 backdrop-filter: blur(20px)
+        
     &__first-card-count
         color: #A8A8A8
     &__second-card-count
@@ -73,7 +77,8 @@
         font-family: Cardo
         text-align: center
     &__card-list
-        margin: 25px 0 150px 0
+        // margin: 25px 0 150px 0
+        margin-top: 45px
         display: flex
         flex-direction: column
         gap: 15px
@@ -86,6 +91,8 @@
             list-style: none
             img
                 margin-right: 5px
+        &:nth-child(3)
+            margin-bottom: 0px !important
     &__button-wrapper
         display: flex
         flex-direction: column
@@ -114,7 +121,8 @@
             cursor: pointer
             background-position: -253px
     &__second-card-wrapper
-        margin-top: -63px
+        // margin-top: -40px
+        position: relative
     &__second-card-button
         background: #FFD502
         transition: all .3s ease
@@ -123,8 +131,9 @@
             background: black
             color: #FFD502
     &__cart-label
-        position: relative
-        top: 20px
+        position: absolute
+        color: #595959
+        top: -40px
         left: 60%
         border-radius: 8px
         background: #FFFFFF
@@ -176,7 +185,7 @@
             margin: auto
             justify-content: center
             border-radius: 4px
-            padding: 17.5px 0
+            padding: 13.25px 0
             font-size: 18px
             font-weight: 800
             font-family: Nunito Sans
@@ -197,8 +206,10 @@
         &__cart-label
             width: 100px
             left: 70%
-
-        
+@media (max-width: 338px)
+    .packages
+        &__card
+            height: 600px !important
 
 
 

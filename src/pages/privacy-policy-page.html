@@ -6,10 +6,14 @@
     <main>
         @@include('blocks/policy-main-page.html')
         <div class="privacy-policy-articles">
-            @@include('blocks/policy-interpretation.html')
-            @@include('blocks/policy-collecting-data.html')
-            @@include('blocks/policy-definitions.html')
-            @@include('blocks/contact-doc-block.html')
+            <div class="articles-wrapper">
+                @@include('blocks/policy-interpretation.html')
+                @@include('blocks/policy-collecting-data.html')
+            </div>
+            <div class="articles-wrapper">
+                @@include('blocks/policy-definitions.html')
+                @@include('blocks/contact-doc-block.html')
+            </div>
         </div>
         
     </main>

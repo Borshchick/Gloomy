@@ -277,6 +277,7 @@
 }
 .main-home__data-wrapper {
   display: flex;
+  justify-content: center;
   color: white;
   font-size: 40px;
   font-family: Cardo;
@@ -756,6 +757,25 @@
   top: -3.5px;
 }
 .faq__accordion-item:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #041C69;
+  border-radius: 50%;
+  top: -3.5px;
+}
+.faq__accordion-item:nth-last-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #041C69;
+  border-radius: 50%;
+  right: 0;
+  top: -3.5px;
+}
+.faq__accordion-item:nth-last-child(1)::before {
   content: "";
   position: absolute;
   width: 6px;
@@ -1552,6 +1572,13 @@
   color: red;
   margin-top: -20px;
   margin-bottom: 20px;
+}
+
+.error-url {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Nunito Sans;
+  color: red;
 }
 
 #email-error {
@@ -2376,6 +2403,10 @@
   font-weight: 400;
   font-family: Nunito Sans;
   text-indent: -25px;
+  padding-left: 25px;
+}
+.articles li::marker {
+  padding-right: 25px;
 }
 .articles a {
   text-decoration: none;

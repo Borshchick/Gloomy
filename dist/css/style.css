@@ -277,6 +277,7 @@
 }
 .main-home__data-wrapper {
   display: flex;
+  justify-content: center;
   color: white;
   font-size: 40px;
   font-family: Cardo;
@@ -763,6 +764,29 @@
   background-color: #041C69;
   border-radius: 50%;
   top: -3.5px;
+}
+.faq__accordion-item:last-child .faq__accordion-button {
+  position: relative;
+}
+.faq__accordion-item:last-child .faq__accordion-button::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #041C69;
+  border-radius: 50%;
+  right: 0;
+  bottom: -3.5px;
+}
+.faq__accordion-item:last-child .faq__accordion-button::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #041C69;
+  border-radius: 50%;
+  left: 0;
+  bottom: -3.5px;
 }
 .faq__accordion-button {
   color: white;
@@ -1552,6 +1576,13 @@
   color: red;
   margin-top: -20px;
   margin-bottom: 20px;
+}
+
+.error-url {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Nunito Sans;
+  color: red;
 }
 
 #email-error {
@@ -2376,6 +2407,10 @@
   font-weight: 400;
   font-family: Nunito Sans;
   text-indent: -25px;
+  padding-left: 25px;
+}
+.articles li::marker {
+  padding-right: 25px;
 }
 .articles a {
   text-decoration: none;

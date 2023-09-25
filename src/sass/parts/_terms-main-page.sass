@@ -1,8 +1,17 @@
 .terms-main
-    background-image: url('../../img/examples-bg.png')
-    background-repeat: no-repeat
-    background-size: 100% 100%
-    padding: 150px 0 200px 0
+    // background-image: url('../../img/examples-bg.png')
+    // background-repeat: no-repeat
+    // background-size: 100% 100%
+    position: relative
+    margin-bottom: -200px
+    &__video
+        position: absolute
+        height: 80%
+        object-fit: cover
+    &__video-cover
+        width: 100%
+        position: relative
+        bottom: 100px
     &__wrapper
         width: 90%
         max-width: 844px
@@ -11,6 +20,9 @@
         display: flex
         flex-direction: column
         gap: 50px
+        padding: 150px 0 200px 0
+        position: relative
+        z-index: 2
     h2
         color: white
         font-size: 36px

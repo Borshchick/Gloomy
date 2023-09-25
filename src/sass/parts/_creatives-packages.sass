@@ -2,8 +2,9 @@
     background-image: url('../../img/lines-bg.png')
     background-size: cover
     background-repeat: no-repeat
-    background-position: center bottom
+    background-position: center 300px
     padding-bottom: 50px
+    margin-top: -200px
     &__cards-tittle
         font-family: Cardo
         font-weight: 700
@@ -121,7 +122,6 @@
             cursor: pointer
             background-position: -253px
     &__second-card-wrapper
-        // margin-top: -40px
         position: relative
     &__second-card-button
         background: #FFD502
@@ -147,11 +147,13 @@
         font-family: Poppins
     &__third-card-button
         background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%)
+        background-size: 100% 100%
         color: white
         transition: all .3s ease
         &:hover
             transition: all .3s
-            background-position: 253px
+            // background-position: 253px
+            background-size: 200% 200%
             cursor: pointer
     &__line-wrapper
         width: 100%
@@ -179,6 +181,7 @@
         a
             color: white
             background-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%, #FFD502 -16.68%)
+            background-size: 100% 100%
             max-width: 253px
             width: 100%
             display: flex
@@ -193,9 +196,10 @@
             margin-top: 38px
             &:hover
                 cursor: pointer
-                background-position: 253px
+                background-size: 200% 200%
 @media (max-width: 1270px)
     .packages
+        margin-top: 0
         &__cards
             flex-wrap: wrap
             justify-content: center
@@ -208,6 +212,7 @@
             left: 70%
 @media (max-width: 338px)
     .packages
+        margin-top: 0
         &__card
             height: 600px !important
 

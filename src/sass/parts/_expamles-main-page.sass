@@ -1,8 +1,16 @@
 .examples
-    background-image: url('../../img/examples-bg.png')
-    background-size: 100% 85%
-    background-repeat: no-repeat
+    position: relative
+    &__video
+        position: absolute
+        object-fit: cover
+        height: 80%
+    &__video-cover
+        position: relative
+        width: 100%
+        top: -150px
+        // bottom: -20%
     &__wrapper
+        position: relative
         display: flex
         width: 90%
         max-width: 1400px
@@ -11,6 +19,12 @@
         padding-bottom: 100px 
         align-items: center
         justify-content: center
+    &__tittle-wrapper
+        position: relative
+    &__cross-wrapper
+        position: absolute
+        top: -45px
+        left: -35px
     &__article
         display: flex
         flex-direction: column
@@ -56,6 +70,7 @@
         max-width: 646px
         height: 70%
         max-height: 442px
+        z-index: 2
 @media (max-width:994px)
     .examples
         background-size: 100% 94%
@@ -67,12 +82,9 @@
             a
                 margin: auto
                 margin-bottom: 100px
-            div
-                svg
-                    left: -98%
+        &__cross-wrapper
+            left: -4%
 @media (max-width:368px)
     .examples
-        &__article
-            div
-                svg
-                    left: -80%
+        &__cross-wrapper
+            left: 10%

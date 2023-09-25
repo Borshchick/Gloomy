@@ -1,18 +1,28 @@
 
 .contact-us
-    background-image: url('../../img/examples-bg.png')
-    background-size: 100% 87%
-    background-repeat: no-repeat
-    padding: 150px 0
-    margin-bottom: 50px
+    margin-bottom: -250px
+    position: relative
+    &__video
+        position: absolute
+        object-fit: cover
+        height: 70%
+    &__video-cover
+        width: 100%
+        position: relative
+        bottom: 270px
     &__tittle-wrapper
         margin-top: -80px
+        position: relative
+    &__cross-wrapper
+        position: relative
+        left: -32px
     &__wrapper
         display: flex
         width: 80%
         max-width: 1400px
         margin: auto
         justify-content: center
+        padding: 150px 0
         h2
             font-size: 36px
             font-weight: 700
@@ -43,6 +53,7 @@
             width: 50%
             // max-width: 591px
             height: 50%
+            z-index: 2
             // max-height: 360px
         svg
             position: relative

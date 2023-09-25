@@ -1,8 +1,15 @@
 .about
-    background-image: url('../../img/examples-bg.png')
-    background-size: 100% 95%
-    background-repeat: no-repeat
-    padding: 150px 0 250px 0
+    position: relative
+    padding: 0px 0 250px 0
+    margin-bottom: -200px
+    &__video
+        position: absolute
+        object-fit: cover
+        height: 70%
+    &__video-cover
+        position: relative
+        width: 100%
+        bottom: -50px
     &__wrapper
         display: flex
         flex-direction: column
@@ -11,6 +18,7 @@
         max-width: 435px
         margin: auto
         text-align: center
+        padding: 100px 0 50px 0
         h2
             font-size: 36px
             font-weight: 700
@@ -41,12 +49,15 @@
                 cursor: pointer
                 background-size: 200% 200%
     &__tittle-wrapper
-        svg
-            position: relative
-            left: -60%
+        position: relative
+    &__cross-wrapper
+        position: relative
+        top: -25px
+        left: -66px
 @media (max-width: 550px)
     .about
-        &__tittle-wrapper
-            svg
-                position: relative
-                left: -45%
+        margin-bottom: -350px
+        &__cross-wrapper
+            left: 0
+        &__video-cover
+            bottom: -27.5px

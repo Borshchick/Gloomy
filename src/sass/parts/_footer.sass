@@ -49,10 +49,14 @@
         display: flex
         justify-content: center
         gap: 50px
+    &__contacts-column
+        display: flex
+        flex-direction: column
     &__last-line
         margin-top: 30px
         display: flex
         justify-content: space-between
+        align-items: flex-end
     &__last-text
         color: white
         width: 100%
@@ -77,12 +81,16 @@
                 a
                     color: white
                     text-decoration: none
-@media (max-width: 1191px)
+@media (max-width: 1200px)
     .footer
         &__first-line
             flex-direction: column
             align-items: center
             gap: 20px
+        &__contacts-column
+            text-align: center
+        &__last-line
+            align-items: center
         &__navigation
             ul
                 flex-direction: column

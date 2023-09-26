@@ -528,7 +528,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 100px;
   height: 141px;
 }
 .top-line__partners div {
@@ -609,6 +608,7 @@
     animation: scroll 15s linear infinite;
     white-space: nowrap;
     will-change: transform;
+    gap: 100px;
   }
   .top-line__partners img {
     margin: 0 16px;
@@ -675,6 +675,7 @@
   .top-line__partners {
     animation: scroll 25s linear infinite;
     white-space: nowrap;
+    gap: 100px;
   }
   .top-line__partners img {
     margin: 0 16px;
@@ -1399,11 +1400,6 @@
   transition: all 0.3s ease;
   border: 1.5px solid white;
   height: 560px;
-}
-.packages__card:hover {
-  transform: translateY(-2%) !important;
-  cursor: pointer;
-  backdrop-filter: blur(20px);
 }
 .packages__card h2:nth-child(1) {
   font-family: Cardo;
@@ -2557,10 +2553,10 @@
   font-size: 18px;
   font-weight: 400;
   font-family: Nunito Sans;
-  padding-left: 25px;
+  padding-left: 15px;
 }
 .articles li::marker {
-  padding-right: 25px;
+  padding-right: 15px;
 }
 .articles a {
   text-decoration: none;

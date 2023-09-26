@@ -55,6 +55,7 @@ function removeError() {
 function personalDataValidate() {
   let isEmailValid = true;
   let isTextDataValid = true;
+  let isValidURL = true
   personalDataInputs.forEach((dataInput) => {
     const inputType = dataInput.getAttribute("type");
     const dataValue = dataInput.value.trim();
@@ -80,7 +81,7 @@ function personalDataValidate() {
     } else if (dataInput.getAttribute("name") === "url") {
       const urlPattern =
         /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-      let isValidURL = true;
+      // let isValidURL = true;
       if (dataValue === "") {
         urlErrorMessage.innerHTML = "Required";
         isValidURL = false;
@@ -104,7 +105,7 @@ function personalDataValidate() {
         addErrorMessage(dataInput);
         return;
       }
-      isValidURL = true
+      isTextDataValid = true
       removeErrorMessage(dataInput);
       // console.log("removeErrorMessage", dataInput);
       dataInput.classList.remove("error-input");

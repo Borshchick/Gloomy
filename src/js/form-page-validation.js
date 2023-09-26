@@ -18,17 +18,20 @@ personalDataInputs.forEach((input) => {
   }
 });
 
-function addErrorMessage() {
-  console.log(dataErrorMessages, textInputs)
-  dataErrorMessages.forEach((message) => {
-    message.innerHTML = "Required";
-  });
+function addErrorMessage(input) {
+  const errorMessageId = input.name + "Error";
+  const errorMessage = document.getElementById(errorMessageId);
+  if (errorMessage) {
+    errorMessage.innerHTML = "Required";
+  }
 }
 
-function removeErrorMessage() {
-  dataErrorMessages.forEach((message) => {
-    message.innerHTML = "";
-  });
+function removeErrorMessage(input) {
+  const errorMessageId = input.name + "Error";
+  const errorMessage = document.getElementById(errorMessageId);
+  if (errorMessage) {
+    errorMessage.innerHTML = "";
+  }
 }
 
 function removeCheck(checkBoxes) {
@@ -52,7 +55,6 @@ function removeError() {
 function personalDataValidate() {
   let isEmailValid = true;
   let isTextDataValid = true;
-
   personalDataInputs.forEach((dataInput) => {
     const inputType = dataInput.getAttribute("type");
     const dataValue = dataInput.value.trim();
@@ -72,12 +74,13 @@ function personalDataValidate() {
         dataInput.classList.add("error-input");
         return;
       }
+      // const emailValue = dataValue
       emailErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
     } else if (dataInput.getAttribute("name") === "url") {
       const urlPattern =
         /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-      isValidURL = true;
+      let isValidURL = true;
       if (dataValue === "") {
         urlErrorMessage.innerHTML = "Required";
         isValidURL = false;
@@ -89,6 +92,7 @@ function personalDataValidate() {
         isValidURL = false;
         return;
       }
+      // const URLValue = dataValue
       isValidURL = true;
       urlErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
@@ -97,11 +101,12 @@ function personalDataValidate() {
       if (dataValue === "") {
         isTextDataValid = false;
         dataInput.classList.add("error-input");
-        addErrorMessage();
+        addErrorMessage(dataInput);
         return;
       }
-      removeErrorMessage();
-      console.log("removeErrorMessage", dataInput);
+      isValidURL = true
+      removeErrorMessage(dataInput);
+      // console.log("removeErrorMessage", dataInput);
       dataInput.classList.remove("error-input");
     }
   });
@@ -142,6 +147,12 @@ function isSecondCheck() {
   console.log("good");
   return true;
 }
+
+
+// let formData = {
+//   email: emailValue,
+//   url: URLValue,
+// }
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();

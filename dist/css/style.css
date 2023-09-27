@@ -2492,6 +2492,28 @@
   color: white;
 }
 
+@media (max-width: 990px) and (min-width: 395px) {
+  .policy-main-page {
+    margin-bottom: -250px;
+  }
+  .policy-main-page__video-cover {
+    bottom: 182px;
+  }
+  .policy-main-page__video {
+    height: 75%;
+  }
+}
+@media (max-width: 395px) {
+  .policy-main-page {
+    margin-bottom: -200px;
+  }
+  .policy-main-page__video {
+    height: 80%;
+  }
+  .policy-main-page__video-cover {
+    bottom: 177px;
+  }
+}
 #list {
   margin-top: 12px;
   display: flex;

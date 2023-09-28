@@ -12,6 +12,40 @@ const urlErrorMessage = document.querySelector(".error-url");
 
 const textInputs = [];
 
+const fetchData = () => {
+  const inputs = document.querySelectorAll("input");
+  const values = {};
+  const selectedOptions = [];
+
+  inputs.forEach((input) => {
+    if (input.type !== "submit") {
+      if (input.type === "checkbox") {
+        if (input.checked) {
+          const label = document.querySelector(`label[for="${input.id}"]`);
+          if (label) {
+            selectedOptions.push(label.textContent); 
+          }
+          return
+        } 
+      }else{
+        values[input.name] = input.value
+      }
+    }
+  });
+
+  selectedOptions.forEach((option) => {
+    values[option] = option;
+  });
+
+  console.log(values);
+
+  fetch("./posts.php", {
+    method: "POST",
+    body: values,
+  });
+};
+
+
 personalDataInputs.forEach((input) => {
   if (input.type !== "email" && input.name !== "competitors") {
     textInputs.push(input);
@@ -75,13 +109,12 @@ function personalDataValidate() {
         dataInput.classList.add("error-input");
         return;
       }
-      // const emailValue = dataValue
+      const emailValue = dataValue
       emailErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
     } else if (dataInput.getAttribute("name") === "url") {
       const urlPattern =
         /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-      // let isValidURL = true;
       if (dataValue === "") {
         urlErrorMessage.innerHTML = "Required";
         isValidURL = false;
@@ -93,7 +126,7 @@ function personalDataValidate() {
         isValidURL = false;
         return;
       }
-      // const URLValue = dataValue
+      const URLValue = dataValue
       isValidURL = true;
       urlErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
@@ -107,7 +140,6 @@ function personalDataValidate() {
       }
       isTextDataValid = true
       removeErrorMessage(dataInput);
-      // console.log("removeErrorMessage", dataInput);
       dataInput.classList.remove("error-input");
     }
   });
@@ -158,17 +190,20 @@ function isSecondCheck() {
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
+  // console.log(formData)
+
   let isPersonalDataValid = personalDataValidate();
   let isFirstCheckedValid = isFirstChecked();
   let isSecondCheckValid = isSecondCheck();
 
   if (isPersonalDataValid && isFirstCheckedValid && isSecondCheckValid) {
+    fetchData()
     removeCheck(firstCheckBoxes);
     removeCheck(secondCheckBoxes);
     removeError();
     removeErrorMessage();
     console.log("all ok");
-    return;
+    // return;
   } else {
     console.log("i have bad news for u");
   }

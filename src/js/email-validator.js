@@ -1,6 +1,24 @@
 const emailInput = document.querySelector("#email-input");
 const submitButton = document.querySelector("#submit-button");
 const errorMessege = document.querySelector(".error");
+
+fetchData = () => {
+  const inputs = form.querySelectorAll('input')
+  const values ={}
+  inputs.forEach((input) => {
+    if(input.type !== 'submit'){
+      values[input.name] = input.value
+      console.log(values)
+    }
+  })
+
+    fetch("./posts.php", {
+    method: "POST",
+    body: values,
+  });
+
+}
+
 const validateEmail = (email) => {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(email);
@@ -13,6 +31,7 @@ submitButton.addEventListener("click", function (event) {
       errorMessege.innerHTML = "Invalid Email";
       emailInput.classList.add("error-border");
     } else {
+      fetchData()
       emailInput.classList.remove("error-border");
       errorMessege.innerHTML = "";
       emailInput.value = "";

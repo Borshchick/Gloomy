@@ -2,17 +2,19 @@
     margin-bottom: 50px
     background-image: url("../../img/space-second.png")
     background-repeat: no-repeat
-    background-size: cover
-    padding: 250px 0 100px 0
+    background-size: 100% 90%
+    padding: 250px 0 370px 0
     &__wrapper
         width: 80%
         max-width: 1217px
         margin: auto
     &__tittle
-        font-size: 36px
+        font-size: 26px
         font-weight: 700
         font-family: Cardo
         color: #F2CA00
+        max-width: 1100px
+        margin: auto
         margin-bottom: 70px
         position: relative
         display: flex
@@ -21,6 +23,8 @@
         top: -80%
     &__accordion-wrapper
         background: #081029
+        max-width: 1100px
+        margin: auto
     &__accordion-content
         max-height: 0
         overflow: hidden
@@ -102,10 +106,9 @@
                     bottom: -3.5px
     &__accordion-button
         color: white
-        font-size: 26px
+        font-size: 20px
         font-weight: 600
         font-family: Nunito Sans
-    &__accordion-button
         padding: 30px
         display: flex
         flex-direction: row
@@ -115,35 +118,13 @@
         width: max-content
         height: max-content
         transition: all .3s
-    // &__accordion-last-item-dots
-    //     position: absolute
-    //     width: 100%
-    //     height: 100%
-    //     &:before
-    //         content: ''
-    //         position: absolute
-    //         width: 6px
-    //         height: 6px
-    //         background-color: #041C69
-    //         border-radius: 50%
-    //         left: 0
-    //         bottom: -3.5px
-    //     &:after
-    //         content: ''
-    //         position: absolute
-    //         width: 6px
-    //         height: 6px
-    //         background-color: #041C69
-    //         border-radius: 50%
-    //         right: 0
-    //         bottom: -3.5px
     &__article-wrapper
         display: flex
         gap: 100px
         width: 85%
         max-width: 1300px
         margin: auto
-        margin-top: 80px
+        margin-top: 180px
         align-items: center
         img
             width: 100%
@@ -152,11 +133,11 @@
             max-height: 345px
         p
             font-family: Nunito Sans
-            font-size: 20px
+            font-size: 18px
             font-weight: 600 
             color: white
-            margin-top: 42px
-            line-height: 2
+            margin-top: 32px
+            line-height: 1.5
     &__marker
         background: #3E4D7C
         height: 6px
@@ -168,7 +149,7 @@
         align-items: center
     &__article-tittle
         color: #F2CA00
-        font-size: 36px
+        font-size: 26px
         font-family: Cardo
         font-weight: 700
         margin-bottom: 60px
@@ -184,6 +165,7 @@
         border-image: linear-gradient(119.01deg, #FFD502 -16.68%, #FF02E6 116.35%)
         border-image-slice: 1
         border-image-repeat: stretch
+        background: transparent
         text-align: center
         transition: .3s all
         display: flex
@@ -229,6 +211,7 @@
                 padding-left: 0
 @media (max-width: 499px)
     .faq
+        background-size: cover
         &__cross-wrapper
             top: -40%
         &__wrapper

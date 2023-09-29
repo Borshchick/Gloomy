@@ -1,4 +1,7 @@
 <div class="main-home">
+  <div id="popup1" class="pop-up__wrapper">
+    @@include('pop-up-form.html')
+  </div>
   <div class="main-home__main-wrapper">
     <div class="main-home__content">
       <video class="main-home__video" width="100%" autoplay muted loop>
@@ -14,7 +17,7 @@
           </h1>
         </div>
         <p class="main-home__text">Make more money per dollar you spend</p>
-        <a href="" class="main-home__button"> BOOST YOUR SALES </a>
+        <button data-popup-trigger="popup1" class="main-home__button"> BOOST YOUR SALES </button>
       </div>
       <div class="main-home__data-wrapper">
         <div data-aos="fade-up-right" class="main-home__data">

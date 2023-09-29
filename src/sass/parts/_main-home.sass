@@ -2,30 +2,33 @@
     &__video
         position: absolute
         object-fit: cover
-        height: 99%
+        height: 83%
     &__video-cover
         position: relative
         width: 100%
+        bottom: 100px
     &__tittle-wrapper
         display: flex
         position: relative
     &__cross-wrapper
         position: relative
         position: absolute
-        top: 20%
+        top: 26%
+        left: 5%
     &__wrapper
         text-align: center
         width: 100%
-        max-width: 1010px
+        max-width: 990px
         margin: auto
         position: relative
-        z-index: 2
+        // z-index: 2
+        margin-bottom: -60px
     &__content
         position: relative
     &__tittle
         font-family: Cardo
         font-weight: 400
-        font-size: 74px
+        font-size: 64px
         color: white
         padding-top: 100px
         margin: auto
@@ -51,6 +54,7 @@
         font-size: 18px
         font-weight: 800
         font-family: Nunito Sans
+        border: none
         transition: .3s all 
         margin-bottom: 200px
         text-decoration: none
@@ -69,7 +73,7 @@
         max-width: 990px
         margin: auto
         position: relative
-        z-index: 2
+        // z-index: 2
     &__data-text
         color: white
         font-size: 20px
@@ -78,13 +82,15 @@
     &__data
         text-align: center
         margin-bottom: 100px
-@media (max-width:1060px) and (min-width: 600px)
+@media (max-width:1060px) and (min-width: 670px)
     .main-home
         &__tittle-wrapper
             width: 90%
             max-width: 1009px
             margin: auto
             display: flex
+        &__cross-wrapper
+            left: -2%
         &__tittle
             font-size: 60px
         &__text
@@ -99,17 +105,18 @@
             font-size: 16px
         &__data
             font-size: 20px
-@media (max-width: 600px)
+@media (max-width: 670px)
     .main-home
-        margin-bottom: 100px
-        &__video-cover
-            bottom: -100px
+        &__video
+            height: 84%
         &__content
             padding-bottom: 100px
         &__tittle-wrapper
             width: 90%
             max-width: 1009px
             margin: auto
+        &__cross-wrapper
+            left: -2%
         &__tittle
             font-size: 40px
         &__text
@@ -119,5 +126,6 @@
             margin-bottom: 100px
             flex-direction: column
             gap: 100px
+            margin-bottom: 100px
         &__data
             margin-bottom: 0

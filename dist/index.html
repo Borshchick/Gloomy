@@ -108,6 +108,62 @@
 
     <main>
         <div class="main-home">
+  <div id="popup1" class="pop-up__wrapper">
+    <div class="pop-up">
+  <form class="pop-up__form">
+    <div class="pop-up__input-wrapper">
+        <label for="name">Your Name<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="name"
+        type="text"
+        placeholder="Enter your name
+        "
+    />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="popup-email">Your Email Address<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="popup-email"
+        type="email"
+        placeholder="Enter your email address
+        "
+        />
+    </div class="pop-up__input-wrapper">
+    <div class="pop-up__input-wrapper">
+        <label for="phone">Your Phone number</label>
+        <input
+        class="pop-up__input"
+        id="phone"
+        type="tel"
+        placeholder="Enter your phone number"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="toppic">Topic</label>
+        <input
+        class="pop-up__input"
+        id="topic"
+        type="text"
+        placeholder="Enter your topic"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="message">Your message</label>
+        <textarea
+        id="message-input"
+          class="pop-up__input"
+          id="message"
+          type="text"
+          placeholder="Enter your message"
+        ></textarea>
+    </div>
+    <input type="submit" value="Send" />
+  </form>
+</div>
+
+  </div>
   <div class="main-home__main-wrapper">
     <div class="main-home__content">
       <video class="main-home__video" width="100%" autoplay muted loop>
@@ -129,7 +185,7 @@
           </h1>
         </div>
         <p class="main-home__text">Make more money per dollar you spend</p>
-        <a href="" class="main-home__button"> BOOST YOUR SALES </a>
+        <button data-popup-trigger="popup1" class="main-home__button"> BOOST YOUR SALES </button>
       </div>
       <div class="main-home__data-wrapper">
         <div data-aos="fade-up-right" class="main-home__data">
@@ -501,12 +557,124 @@
         and collaborative terms discussion. Together, let's bring your ideas to
         fruition.
       </p>
-      <a class="faq__apply-button"> APPLY </a>
+      <button data-popup-trigger="popup" class="faq__apply-button"> APPLY </button>
     </div>
   </div>
+  <!-- <div id="popup2" class="pop-up__wrapper d-none">
+    <div class="pop-up">
+  <form class="pop-up__form">
+    <div class="pop-up__input-wrapper">
+        <label for="name">Your Name<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="name"
+        type="text"
+        placeholder="Enter your name
+        "
+    />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="popup-email">Your Email Address<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="popup-email"
+        type="email"
+        placeholder="Enter your email address
+        "
+        />
+    </div class="pop-up__input-wrapper">
+    <div class="pop-up__input-wrapper">
+        <label for="phone">Your Phone number</label>
+        <input
+        class="pop-up__input"
+        id="phone"
+        type="tel"
+        placeholder="Enter your phone number"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="toppic">Topic</label>
+        <input
+        class="pop-up__input"
+        id="topic"
+        type="text"
+        placeholder="Enter your topic"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="message">Your message</label>
+        <textarea
+        id="message-input"
+          class="pop-up__input"
+          id="message"
+          type="text"
+          placeholder="Enter your message"
+        ></textarea>
+    </div>
+    <input type="submit" value="Send" />
+  </form>
+</div>
+
+  </div> -->
 </section>
 
         <section class="accelerate">
+  <!-- <div id="popup3" class="pop-up__wrapper d-none">
+    <div class="pop-up">
+  <form class="pop-up__form">
+    <div class="pop-up__input-wrapper">
+        <label for="name">Your Name<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="name"
+        type="text"
+        placeholder="Enter your name
+        "
+    />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="popup-email">Your Email Address<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="popup-email"
+        type="email"
+        placeholder="Enter your email address
+        "
+        />
+    </div class="pop-up__input-wrapper">
+    <div class="pop-up__input-wrapper">
+        <label for="phone">Your Phone number</label>
+        <input
+        class="pop-up__input"
+        id="phone"
+        type="tel"
+        placeholder="Enter your phone number"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="toppic">Topic</label>
+        <input
+        class="pop-up__input"
+        id="topic"
+        type="text"
+        placeholder="Enter your topic"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="message">Your message</label>
+        <textarea
+        id="message-input"
+          class="pop-up__input"
+          id="message"
+          type="text"
+          placeholder="Enter your message"
+        ></textarea>
+    </div>
+    <input type="submit" value="Send" />
+  </form>
+</div>
+
+  </div> -->
   <div class="accelerate__wrapper">
     <div class="accelerate__article-wrapper">
       <div data-aos="fade-right" class="accelerate__article">
@@ -527,7 +695,7 @@
           embrace your arrival! Eschew hesitation, and initiate your odyssey
           towards manifesting your ambitions at this very moment.
         </p>
-        <a class="accelerate__apply-button">APPLY</a>
+        <a data-popup-trigger="popup3" class="accelerate__apply-button">APPLY</a>
       </div>
       <img data-aos="fade-left" src="../../img/steps.png" />
     </div>
@@ -535,7 +703,7 @@
       <div class="accelerate__line-promotion">
         <h3>Ready to Accelerate Your Store?</h3>
         <p>It's 100% ROI oriented.</p>
-        <a class="accelerate__line-button">BOOST YOUR SALES</a>
+        <a data-popup-trigger="popup" class="accelerate__line-button">BOOST YOUR SALES</a>
       </div>
     </div>
     <div class="accelerate__newsletter-wrapepr">
@@ -657,6 +825,7 @@
   <script src="../../js/link.js"></script>
   <script src="../../js/animated-cross.js"></script>
   <script src="../../js/swiper.js"></script>
+  <script src="../../js/pop-up.js"></script>
 </footer>
 
 </body>

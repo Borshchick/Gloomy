@@ -108,6 +108,62 @@
 
     <main>
         <div class="about">
+    <div id="popup1" class="pop-up__wrapper">
+        <div class="pop-up">
+  <form class="pop-up__form">
+    <div class="pop-up__input-wrapper">
+        <label for="name">Your Name<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="name"
+        type="text"
+        placeholder="Enter your name
+        "
+    />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="popup-email">Your Email Address<span>*</span></label>
+        <input
+        class="pop-up__input"
+        id="popup-email"
+        type="email"
+        placeholder="Enter your email address
+        "
+        />
+    </div class="pop-up__input-wrapper">
+    <div class="pop-up__input-wrapper">
+        <label for="phone">Your Phone number</label>
+        <input
+        class="pop-up__input"
+        id="phone"
+        type="tel"
+        placeholder="Enter your phone number"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="toppic">Topic</label>
+        <input
+        class="pop-up__input"
+        id="topic"
+        type="text"
+        placeholder="Enter your topic"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="message">Your message</label>
+        <textarea
+        id="message-input"
+          class="pop-up__input"
+          id="message"
+          type="text"
+          placeholder="Enter your message"
+        ></textarea>
+    </div>
+    <input type="submit" value="Send" />
+  </form>
+</div>
+
+      </div>
     <video class="about__video" width="100%" autoplay muted loop>
         <source src="../../video/Gloomy-bg-video.mp4" />
       </video>
@@ -125,7 +181,7 @@
             <h2>HOME TO THE TOP 1%</h2>
         </div>
         <p>All industry leaders in one place</p>
-        <a>BOOST YOUR SALES</a>
+        <a data-popup-trigger="popup1">BOOST YOUR SALES</a>
     </div>
     <img class="about__video-cover" src="../../img/second-video-cover.png" />
 </div>
@@ -252,6 +308,7 @@
   <script src="../../js/link.js"></script>
   <script src="../../js/animated-cross.js"></script>
   <script src="../../js/swiper.js"></script>
+  <script src="../../js/pop-up.js"></script>
 </footer>
 
 </body>

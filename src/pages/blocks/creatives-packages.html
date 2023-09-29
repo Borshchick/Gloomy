@@ -1,4 +1,7 @@
 <section class="packages">
+  <div id="popup1" class="pop-up__wrapper">
+    @@include('pop-up-form.html')
+  </div>
   <div class="packages__wrapper">
     <div class="packages__cards-wrapper">
       <div>
@@ -29,7 +32,7 @@
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">2 Week Delivery</h3>
                 <a class="packages__first-card-button">
-                  <div>Get Started</div>
+                  <div data-popup-trigger="popup1">Get Started</div>
                 </a>
           </div>
         </div>
@@ -62,7 +65,7 @@
 
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">3 Week Delivery</h3>
-            <a class="packages__second-card-button">Get Started</a>
+            <a data-popup-trigger="popup1" class="packages__second-card-button">Get Started</a>
           </div>
         </div>
         <div data-aos="flip-left" class="packages__card">
@@ -95,7 +98,7 @@
 
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">5 Week Delivery</h3>
-            <a class="packages__third-card-button">Get Started</a>
+            <a data-popup-trigger="popup1" class="packages__third-card-button">Get Started</a>
           </div>
         </div>
       </div>
@@ -104,7 +107,7 @@
         <div class="packages__line">
             <h3>Custom Package</h3>
             <p>Need a large volume of videos? Get in touch!</p>
-            <a>Get Started</a>
+            <a data-popup-trigger="popup1">Get Started</a>
         </div>
     </div>
   </div>

@@ -152,6 +152,69 @@
 </section>
 
         <section class="packages">
+  <div id="popup1" class="pop-up__wrapper">
+    <div class="pop-up">
+    <span class="pop-up__close">&#215;</span>
+  <form class="pop-up__form">
+    <div class="pop-up__input-wrapper">
+        <label for="name">Your Name<span>*</span></label>
+        <input
+        class="pop-up__input"
+        name="name"
+        type="text"
+        placeholder="Enter your name
+        "
+    />
+        <p id="nameError" name="nameError" class="pop-up-error-message"></p>
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="popup-email">Your Email Address<span>*</span></label>
+        <input
+        class="pop-up__input"
+        name="email"
+        type="email"
+        placeholder="Enter your email address
+        "
+        />
+         <p id="emailError" name="emailError" class="pop-up-error-message"></p>
+    </div>
+   
+    <div class="pop-up__input-wrapper">
+        <label for="phone">Your Phone number</label>
+        <input
+        maxlength="10"
+        class="pop-up__input"
+        name="phone"
+        type="tel"
+        placeholder="Enter your phone number"
+        />
+        <p id="phoneError" name="phoneError" class="pop-up-error-message"></p>
+    </div>
+    
+    <div class="pop-up__input-wrapper">
+        <label for="toppic">Topic</label>
+        <input
+        class="pop-up__input"
+        name="topic"
+        type="text"
+        placeholder="Enter your topic"
+        />
+    </div>
+    <div class="pop-up__input-wrapper">
+        <label for="message">Your message</label>
+        <textarea
+        name="message-input"
+          class="pop-up__input"
+          id="message"
+          type="text"
+          placeholder="Enter your message"
+        ></textarea>
+    </div>
+    <input id="submit" type="submit" value="Send" />
+  </form>
+</div>
+
+  </div>
   <div class="packages__wrapper">
     <div class="packages__cards-wrapper">
       <div>
@@ -188,7 +251,7 @@
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">2 Week Delivery</h3>
                 <a class="packages__first-card-button">
-                  <div>Get Started</div>
+                  <div data-popup-trigger="popup1">Get Started</div>
                 </a>
           </div>
         </div>
@@ -221,7 +284,7 @@
 
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">3 Week Delivery</h3>
-            <a class="packages__second-card-button">Get Started</a>
+            <a data-popup-trigger="popup1" class="packages__second-card-button">Get Started</a>
           </div>
         </div>
         <div data-aos="flip-left" class="packages__card">
@@ -254,7 +317,7 @@
 
           <div class="packages__button-wrapper">
             <h3 class="packages__card-button-tittle">5 Week Delivery</h3>
-            <a class="packages__third-card-button">Get Started</a>
+            <a data-popup-trigger="popup1" class="packages__third-card-button">Get Started</a>
           </div>
         </div>
       </div>
@@ -263,7 +326,7 @@
         <div class="packages__line">
             <h3>Custom Package</h3>
             <p>Need a large volume of videos? Get in touch!</p>
-            <a>Get Started</a>
+            <a data-popup-trigger="popup1">Get Started</a>
         </div>
     </div>
   </div>

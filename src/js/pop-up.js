@@ -1,104 +1,159 @@
-const popupTriggerButtons = document.querySelectorAll('[data-popup-trigger]');
-const popup = document.querySelector('.pop-up__wrapper');
-const popUpWrapper = document.querySelector('.pop-up')
+const popupTriggerButtons = document.querySelectorAll("[data-popup-trigger]");
+const popup = document.querySelector(".pop-up__wrapper");
+const popUpWrapper = document.querySelector(".pop-up");
+const popupCloseButton = document.querySelector(".pop-up__close");
 
-// Відкриття попапу
+
 function openPopUp() {
-    popup.style.display = 'flex'
+  popup.style.display = "flex";
 }
 
-// Закриття попапу
+
 function closePopUp() {
-    popup.style.display = 'none'
+  popup.style.display = "none";
 }
 
-// Перетворення NodeList на масив
+
 const popupTriggerButtonsArray = Array.from(popupTriggerButtons);
 
 popupTriggerButtonsArray.forEach((button) => {
-    button.addEventListener('click', function() {
-        openPopUp();
-    });
+  button.addEventListener("click", function () {
+    openPopUp();
+  });
 });
 
-// Додайте обробник кліків на весь документ
-document.addEventListener('click', function(event) {
-    // Перевірте, чи клік не в попапі та не на кнопці відкриття попапу
-    if (!popUpWrapper.contains(event.target) && !popupTriggerButtonsArray.includes(event.target)) {
-        closePopUp();
-    }
-});
-
-// Додайте обробник клавіші "Escape" для закриття попапу
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closePopUp();
-    }
+document.addEventListener("click", function (event) {
+  
+  if (
+    !popUpWrapper.contains(event.target) &&
+    !popupTriggerButtonsArray.includes(event.target)
+  ) {
+    closePopUp();
+  }
 });
 
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePopUp();
+  }
+});
 
+popupCloseButton.addEventListener("click", () => {
+  closePopUp();
+});
 
+const inputs = document.querySelectorAll(".pop-up__input");
+const popupSubmitButton = document.querySelector('input[type="submit"]');
+const tel = document.querySelector('input[type="tel"]');
+const popUpErrors = document.querySelectorAll(".pop-up-error-message");
+const popUpEmailError = document.getElementById("emailError");
+const popUpTelError = document.getElementById("phoneError");
+const popUpNameError = document.getElementById("nameError");
 
-
-
-// function popUpValidate (){
-//     let isEmailValid = true
-//     let isTelValid = true
-//     let isTextValid = true
-//     inputs.forEach((input) => {
-//         if(input.type === 'email'){
-            // const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            // const inputValue = input.value.trim()
-//             if(inputValue === ''){
-//                 isEmailValid = false
-//                 alert('required')
-//                 return
-//             }else if(!emailPattern.test(inputValue)){
-//                 isEmailValid = false
-//                 alert('invalid email')
-//                 return
-//             }
-//             isEmailValid = true 
-//         }else if(input.type === 'tel'){
-//             const phonePattern = /^\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
-//             const inputValue = input.value.trim()
-//             if(inputValue === ""){
-//                 isTelValid = false
-//             }else if(!phonePattern.test(inputValue)){
-//                 isTelValid = false
-//                 return
-//             }
-//             isTelValid = true
-//         }
-        
-//     })
-//     return isEmailValid && isTextValid && isTelValid
-// }
-
-const inputs = document.querySelectorAll('.pop-up__input')
-const popupSubmitButtons = document.querySelectorAll('input[type="submit"]');
-
-function popupEmailValidate (){
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+function popUpFormData(){
+    const values = {}
     inputs.forEach((input) => {
-        if(input.type === 'email'){
-            const inputValue = input.value.trim()
-            if(inputValue === ''){
-                console.error('required')
-                return
-            }else if(!emailPattern.test(inputValue)){
-                console.error('invalid email')
-                return
-            }
-            console.log("valid email")
+        if(input.type !== 'submit'){
+            values[input.name] = input.value
         }
+    })
+
+    fetch("./popUpForm.php", {
+        method: "POST",
+        body: values,
+      });
+}
+
+function clearAllInputs(){
+    inputs.forEach((input) => {
+        input.value = ''
     })
 }
 
-popupSubmitButtons.forEach((button) => {
-    button.addEventListener('click', function(e){
-        e.preventDefault()
-        popupEmailValidate()
-    })
-})
+function popupEmailValidate() {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  let isEmailValid = true;
+  inputs.forEach((input) => {
+    if (input.type === "email") {
+      const inputValue = input.value.trim();
+      if (inputValue === "") {
+        popUpEmailError.innerHTML = "Required";
+        isEmailValid = false;
+        input.classList.add("pop-up-error-input");
+        return;
+      } else if (!emailPattern.test(inputValue)) {
+        popUpEmailError.innerHTML = "Invalid Email";
+        isEmailValid = false;
+        input.classList.add("pop-up-error-input");
+        return;
+      }
+      popUpEmailError.innerHTML = "";
+      input.classList.remove("pop-up-error-input");
+    }
+  });
+  return isEmailValid;
+}
+
+tel.addEventListener("input", (e) => {
+  tel.value = tel.value.replace(/[^\d.]/g, "");
+});
+
+// function popupPhoneValidate() {
+//   const phonePattern =
+//     /^\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+//   let isPhoneValid = true;
+//   inputs.forEach((input) => {
+//     if (input.type === "tel") {
+//       const inputValue = input.value.trim();
+//       if (inputValue === "") {
+//         popUpTelError.innerHTML = 'Required'
+//         isPhoneValid = false;
+//         input.classList.add('pop-up-error-input')
+//         return;
+//       } else if (!phonePattern.test(inputValue)) {
+//         popUpTelError.innerHTML = 'Invalid Number'
+//         isPhoneValid = false;
+//         input.classList.add('pop-up-error-input')
+//         return;
+//       }
+//       popUpTelError.innerHTML = ''
+//       isPhoneValid = true;
+//       input.classList.remove('pop-up-error-input')
+//     }
+//   });
+//   return isPhoneValid;
+// }
+
+function popupNameValidate() {
+  let isTextValid = true;
+  inputs.forEach((input) => {
+    if (input.name === "name") {
+      const inputValue = input.value.trim();
+      if (inputValue === "") {
+        isTextValid = false;
+        popUpNameError.innerHTML = "Required";
+        input.classList.add("pop-up-error-input");
+        return;
+      }
+      isTextValid = true;
+      popUpNameError.innerHTML = "";
+      input.classList.remove("pop-up-error-input");
+    }
+  });
+  return isTextValid;
+}
+
+popupSubmitButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  let isPopupEmailValid = popupEmailValidate();
+  //   let isPopupPhoneValid = popupPhoneValidate();
+  let isPopupNameValid = popupNameValidate();
+
+  if (isPopupEmailValid && isPopupNameValid) {
+    popUpFormData()
+    console.log("all ok");
+    closePopUp()
+    clearAllInputs()
+  } 
+});

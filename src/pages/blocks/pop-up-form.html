@@ -1,39 +1,46 @@
 <div class="pop-up">
+    <span class="pop-up__close">&#215;</span>
   <form class="pop-up__form">
     <div class="pop-up__input-wrapper">
         <label for="name">Your Name<span>*</span></label>
         <input
         class="pop-up__input"
-        id="name"
+        name="name"
         type="text"
         placeholder="Enter your name
         "
     />
+        <p id="nameError" name="nameError" class="pop-up-error-message"></p>
     </div>
     <div class="pop-up__input-wrapper">
         <label for="popup-email">Your Email Address<span>*</span></label>
         <input
         class="pop-up__input"
-        id="popup-email"
+        name="email"
         type="email"
         placeholder="Enter your email address
         "
         />
-    </div class="pop-up__input-wrapper">
+         <p id="emailError" name="emailError" class="pop-up-error-message"></p>
+    </div>
+   
     <div class="pop-up__input-wrapper">
         <label for="phone">Your Phone number</label>
         <input
+        maxlength="10"
         class="pop-up__input"
-        id="phone"
+        name="phone"
         type="tel"
         placeholder="Enter your phone number"
         />
+        <p id="phoneError" name="phoneError" class="pop-up-error-message"></p>
     </div>
+    
     <div class="pop-up__input-wrapper">
         <label for="toppic">Topic</label>
         <input
         class="pop-up__input"
-        id="topic"
+        name="topic"
         type="text"
         placeholder="Enter your topic"
         />
@@ -41,13 +48,13 @@
     <div class="pop-up__input-wrapper">
         <label for="message">Your message</label>
         <textarea
-        id="message-input"
+        name="message-input"
           class="pop-up__input"
           id="message"
           type="text"
           placeholder="Enter your message"
         ></textarea>
     </div>
-    <input type="submit" value="Send" />
+    <input id="submit" type="submit" value="Send" />
   </form>
 </div>

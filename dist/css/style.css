@@ -3497,6 +3497,7 @@
   width: 100%;
   max-width: 840px;
   height: 737px;
+  overflow: hidden;
   margin-top: 70px;
 }
 .pop-up__close {
@@ -3572,6 +3573,7 @@
   position: fixed;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   top: 0;
   z-index: 2;
   display: none;
@@ -3608,7 +3610,7 @@
     padding: 12.25px 0 12.25px 15px;
   }
   .pop-up__input-wrapper {
-    width: 85% !important;
+    width: 83% !important;
     max-width: 500px !important;
   }
   .pop-up input[type=submit] {
@@ -3640,7 +3642,7 @@
     padding: 12.25px 0 12.25px 15px;
   }
   .pop-up__input-wrapper {
-    width: 85% !important;
+    width: 83% !important;
     max-width: 585px !important;
   }
 }

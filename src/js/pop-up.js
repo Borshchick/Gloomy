@@ -2,15 +2,17 @@ const popupTriggerButtons = document.querySelectorAll("[data-popup-trigger]");
 const popup = document.querySelector(".pop-up__wrapper");
 const popUpWrapper = document.querySelector(".pop-up");
 const popupCloseButton = document.querySelector(".pop-up__close");
-
+const body = document.querySelector('body')
 
 function openPopUp() {
   popup.style.display = "flex";
+  body.style.overflow = 'hidden'
 }
 
 
 function closePopUp() {
   popup.style.display = "none";
+  body.style.overflow = ''
 }
 
 

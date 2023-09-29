@@ -2,19 +2,19 @@ const popupTriggerButtons = document.querySelectorAll("[data-popup-trigger]");
 const popup = document.querySelector(".pop-up__wrapper");
 const popUpWrapper = document.querySelector(".pop-up");
 const popupCloseButton = document.querySelector(".pop-up__close");
-const body = document.querySelector('body')
+const body = document.querySelector("body");
 
 function openPopUp() {
   popup.style.display = "flex";
-  body.style.overflow = 'hidden'
+  body.style.overflow = "hidden";
+  body.classList.add("overflow-hidden");
 }
-
 
 function closePopUp() {
   popup.style.display = "none";
-  body.style.overflow = ''
+  body.style.overflow = "";
+  body.classList.remove("overflow-hidden");
 }
-
 
 const popupTriggerButtonsArray = Array.from(popupTriggerButtons);
 
@@ -25,7 +25,6 @@ popupTriggerButtonsArray.forEach((button) => {
 });
 
 document.addEventListener("click", function (event) {
-  
   if (
     !popUpWrapper.contains(event.target) &&
     !popupTriggerButtonsArray.includes(event.target)
@@ -33,7 +32,6 @@ document.addEventListener("click", function (event) {
     closePopUp();
   }
 });
-
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
@@ -53,24 +51,24 @@ const popUpEmailError = document.getElementById("emailError");
 const popUpTelError = document.getElementById("phoneError");
 const popUpNameError = document.getElementById("nameError");
 
-function popUpFormData(){
-    const values = {}
-    inputs.forEach((input) => {
-        if(input.type !== 'submit'){
-            values[input.name] = input.value
-        }
-    })
+function popUpFormData() {
+  const values = {};
+  inputs.forEach((input) => {
+    if (input.type !== "submit") {
+      values[input.name] = input.value;
+    }
+  });
 
-    fetch("./popUpForm.php", {
-        method: "POST",
-        body: values,
-      });
+  fetch("./popUpForm.php", {
+    method: "POST",
+    body: values,
+  });
 }
 
-function clearAllInputs(){
-    inputs.forEach((input) => {
-        input.value = ''
-    })
+function clearAllInputs() {
+  inputs.forEach((input) => {
+    input.value = "";
+  });
 }
 
 function popupEmailValidate() {
@@ -153,9 +151,9 @@ popupSubmitButton.addEventListener("click", function (e) {
   let isPopupNameValid = popupNameValidate();
 
   if (isPopupEmailValid && isPopupNameValid) {
-    popUpFormData()
+    popUpFormData();
     console.log("all ok");
-    closePopUp()
-    clearAllInputs()
-  } 
+    closePopUp();
+    clearAllInputs();
+  }
 });

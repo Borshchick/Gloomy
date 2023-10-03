@@ -14,8 +14,11 @@ const textInputs = [];
 
 const fetchData = () => {
   const inputs = document.querySelectorAll("input");
-  const values = {};
-  const selectedOptions = [];
+  const selectedOptions = {
+    plan: [],
+    platforms: [],
+  };
+  let formData = new FormData();
 
   inputs.forEach((input) => {
     if (input.type !== "submit") {
@@ -23,28 +26,32 @@ const fetchData = () => {
         if (input.checked) {
           const label = document.querySelector(`label[for="${input.id}"]`);
           if (label) {
-            selectedOptions.push(label.textContent); 
+            console.log(input.name);
+            selectedOptions[input.name].push(label.textContent);
           }
-          return
-        } 
-      }else{
-        values[input.name] = input.value
+          return;
+        }
+      } else {
+        if (input.value) {
+          formData.append(input.name, input.value);
+        }
       }
     }
   });
 
-  selectedOptions.forEach((option) => {
-    values[option] = option;
+  const entries = Object.entries(selectedOptions);
+
+  entries.forEach(([key, values]) => {
+    formData.append(key, values.join(", "));
   });
 
-  console.log(values);
+  console.log("formData", formData);
 
-  fetch("./posts.php", {
+  fetch("/components/sendmail/posts.php", {
     method: "POST",
-    body: values,
+    body: formData,
   });
 };
-
 
 personalDataInputs.forEach((input) => {
   if (input.type !== "email" && input.name !== "competitors") {
@@ -89,7 +96,7 @@ function removeError() {
 function personalDataValidate() {
   let isEmailValid = true;
   let isTextDataValid = true;
-  let isValidURL = true
+  let isValidURL = true;
   personalDataInputs.forEach((dataInput) => {
     const inputType = dataInput.getAttribute("type");
     const dataValue = dataInput.value.trim();
@@ -109,7 +116,7 @@ function personalDataValidate() {
         dataInput.classList.add("error-input");
         return;
       }
-      const emailValue = dataValue
+      const emailValue = dataValue;
       emailErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
     } else if (dataInput.getAttribute("name") === "url") {
@@ -126,7 +133,7 @@ function personalDataValidate() {
         isValidURL = false;
         return;
       }
-      const URLValue = dataValue
+      const URLValue = dataValue;
       isValidURL = true;
       urlErrorMessage.innerHTML = "";
       dataInput.classList.remove("error-input");
@@ -138,7 +145,7 @@ function personalDataValidate() {
         addErrorMessage(dataInput);
         return;
       }
-      isTextDataValid = true
+      isTextDataValid = true;
       removeErrorMessage(dataInput);
       dataInput.classList.remove("error-input");
     }
@@ -181,7 +188,6 @@ function isSecondCheck() {
   return true;
 }
 
-
 // let formData = {
 //   email: emailValue,
 //   url: URLValue,
@@ -197,7 +203,7 @@ submitBtn.addEventListener("click", function (e) {
   let isSecondCheckValid = isSecondCheck();
 
   if (isPersonalDataValid && isFirstCheckedValid && isSecondCheckValid) {
-    fetchData()
+    fetchData();
     removeCheck(firstCheckBoxes);
     removeCheck(secondCheckBoxes);
     removeError();
@@ -214,7 +220,3 @@ const formBg = document.querySelector(".pages-wrapper");
 if (currentPage.includes("contact-us-page.html")) {
   formBg.style.backgroundPosition = "center 200px";
 }
-
-
-
-

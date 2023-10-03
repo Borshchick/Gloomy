@@ -53,15 +53,18 @@ const popUpNameError = document.getElementById("nameError");
 
 function popUpFormData() {
   const values = {};
+  let formData = new FormData();
+
   inputs.forEach((input) => {
     if (input.type !== "submit") {
       values[input.name] = input.value;
+      formData.append(input.name, input.value)
     }
   });
 
-  fetch("./popUpForm.php", {
+  fetch("/components/sendmail/contact.php", {
     method: "POST",
-    body: values,
+    body: formData,
   });
 }
 

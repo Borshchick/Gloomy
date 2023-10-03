@@ -5,17 +5,16 @@ const errorMessege = document.querySelector(".error");
 const fetchEmailData = () => {
   const form = document.querySelector(".newsletter__email-wrapper");
   const inputs = form.querySelectorAll("input");
-  const values = {};
+  let formData = new FormData();
   inputs.forEach((input) => {
     if (input.type !== "submit") {
-      values[input.name] = input.value;
-      console.log(values);
+      formData.append(input.name, input.value);
     }
   });
 
-  fetch("./email.php", {
+  fetch("/components/sendmail/email.php", {
     method: "POST",
-    body: values,
+    body: formData,
   });
 };
 

@@ -154,61 +154,61 @@
         <section class="packages">
   <div id="popup1" class="pop-up__wrapper">
     <div class="pop-up">
-    <span class="pop-up__close">&#215;</span>
+  <span class="pop-up__close">&#215;</span>
   <form class="pop-up__form">
     <div class="pop-up__input-wrapper">
-        <label for="name">Your Name<span>*</span></label>
-        <input
+      <label for="name">Your Name<span>*</span></label>
+      <input
         class="pop-up__input"
         name="name"
         type="text"
         placeholder="Enter your name
         "
-    />
-        <p id="nameError" name="nameError" class="pop-up-error-message"></p>
+      />
+      <p id="nameError" name="nameError" class="pop-up-error-message"></p>
     </div>
     <div class="pop-up__input-wrapper">
-        <label for="popup-email">Your Email Address<span>*</span></label>
-        <input
+      <label for="popup-email">Your Email Address<span>*</span></label>
+      <input
         class="pop-up__input"
         name="email"
         type="email"
         placeholder="Enter your email address
         "
-        />
-         <p id="emailError" name="emailError" class="pop-up-error-message"></p>
+      />
+      <p id="emailError" name="emailError" class="pop-up-error-message"></p>
     </div>
-   
+
     <div class="pop-up__input-wrapper">
-        <label for="phone">Your Phone number</label>
-        <input
+      <label for="phone">Your Phone number</label>
+      <input
         maxlength="10"
         class="pop-up__input"
         name="phone"
         type="tel"
         placeholder="Enter your phone number"
-        />
-        <p id="phoneError" name="phoneError" class="pop-up-error-message"></p>
+      />
+      <p id="phoneError" name="phoneError" class="pop-up-error-message"></p>
     </div>
-    
+
     <div class="pop-up__input-wrapper">
-        <label for="toppic">Topic</label>
-        <input
+      <label for="toppic">Topic</label>
+      <input
         class="pop-up__input"
         name="topic"
         type="text"
         placeholder="Enter your topic"
-        />
+      />
     </div>
     <div class="pop-up__input-wrapper">
-        <label for="message">Your message</label>
-        <textarea
-        name="message-input"
-          class="pop-up__input"
-          id="message"
-          type="text"
-          placeholder="Enter your message"
-        ></textarea>
+      <label for="message">Your message</label>
+      <textarea
+        name="message"
+        class="pop-up__input"
+        id="message"
+        type="text"
+        placeholder="Enter your message"
+      ></textarea>
     </div>
     <input id="submit" type="submit" value="Send" />
   </form>
@@ -362,48 +362,28 @@
         </h5>
         <div class="form-page__check">
           <div class="form-page__check-wrapper">
-            <input
-              class="first_check"
-              
-              id="1"
-              type="checkbox"
-            />
+            <input class="first_check" name="plan" id="1" type="checkbox" />
             <label for="1"
               ><span>1. The Creative Monster</span>: 10 unique video AD
               creatives with x2 iterations</label
             >
           </div>
           <div>
-            <input
-              class="first_check"
-
-              id="2"
-              type="checkbox"
-            />
+            <input name="plan" class="first_check" id="2" type="checkbox" />
             <label for="2"
               ><span>2. The Superstar Monster</span>: 20 unique video AD
               creatives with x2 iterations</label
             >
           </div>
           <div>
-            <input
-              class="first_check"
-              
-              id="3"
-              type="checkbox"
-            />
+            <input name="plan" class="first_check" id="3" type="checkbox" />
             <label for="3"
               ><span>3. The Pimp Monster</span>: 30 unique video AD creatives
               with x2 iterations</label
             >
           </div>
           <div>
-            <input
-              class="first_check"
-              
-              id="4"
-              type="checkbox"
-            />
+            <input name="plan" class="first_check" id="4" type="checkbox" />
             <label for="4"
               ><span>4. The Me Me Me Monster</span>: X unique video AD creatives
               with x2 iterations</label
@@ -423,7 +403,7 @@
             <label>Your Name<span>*</span></label>
           </div>
           <div class="form-page__personal-info-wrapper">
-            <p name = 'forEmail' id="email-error"></p>
+            <p name="forEmail" id="email-error"></p>
             <input
               class="personal-data-input"
               type="email"
@@ -467,35 +447,60 @@
         </h3>
         <div class="form-page__second-check-wrapper">
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="21" name="Facebook" />
+            <input
+              class="second-check"
+              type="checkbox"
+              id="21"
+              name="platforms"
+            />
             <label name="Facebook" for="21">Facebook</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="22" name="Youtube"/>
+            <input
+              class="second-check"
+              type="checkbox"
+              id="22"
+              name="platforms"
+            />
             <label name="Youtube" for="22">Youtube</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="23" name="SnapChat"/>
+            <input
+              class="second-check"
+              type="checkbox"
+              id="23"
+              name="platforms"
+            />
             <label name="SnapChat" for="23">SnapChat</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="24" name="Reddit"/>
+            <input class="second-check" type="checkbox" id="24" name="Reddit" />
             <label name="Reddit" for="24">Reddit</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="25" name="Instagram"/>
+            <input
+              class="second-check"
+              type="checkbox"
+              id="25"
+              name="platforms"
+            />
             <label name="Instagram" for="25">Instagram</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="26" name="TikTok"/>
+            <input class="second-check" type="checkbox" id="26" name="TikTok" />
             <label name="TikTok" for="26">TikTok</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="27" name="Pinterest"/>
+            <input
+              class="second-check"
+              type="checkbox"
+              id="27"
+              name="platforms"
+            />
             <label name="Pinterest" for="27">Pinterest</label>
           </div>
           <div class="form-page__second-check">
-            <input class="second-check" type="checkbox" id="28" name="Other"/>
+            <input class="second-check" type="checkbox" id="28" name="Other" />
             <label name="Other" for="28">Other</label>
           </div>
         </div>

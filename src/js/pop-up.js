@@ -52,13 +52,11 @@ const popUpTelError = document.getElementById("phoneError");
 const popUpNameError = document.getElementById("nameError");
 
 function popUpFormData() {
-  const values = {};
   let formData = new FormData();
 
   inputs.forEach((input) => {
     if (input.type !== "submit") {
-      values[input.name] = input.value;
-      formData.append(input.name, input.value)
+      formData.append(input.name, input.value);
     }
   });
 

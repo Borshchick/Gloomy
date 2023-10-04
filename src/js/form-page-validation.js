@@ -26,7 +26,7 @@ const fetchData = () => {
         if (input.checked) {
           const label = document.querySelector(`label[for="${input.id}"]`);
           if (label) {
-            console.log(input.name);
+              console.log('input.name', input.name);
             selectedOptions[input.name].push(label.textContent);
           }
           return;

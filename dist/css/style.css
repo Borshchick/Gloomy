@@ -3590,7 +3590,6 @@
 
 .overflow-hidden {
   overflow: hidden;
-  height: 100vh;
 }
 
 @media (max-width: 880px) {

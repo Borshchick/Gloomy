@@ -2,18 +2,16 @@ const popupTriggerButtons = document.querySelectorAll("[data-popup-trigger]");
 const popup = document.querySelector(".pop-up__wrapper");
 const popUpWrapper = document.querySelector(".pop-up");
 const popupCloseButton = document.querySelector(".pop-up__close");
-const body = document.querySelector("body");
+const html = document.querySelector("html");
 
 function openPopUp() {
   popup.style.display = "flex";
-  body.style.overflow = "hidden";
-  body.classList.add("overflow-hidden");
+  html.classList.add("overflow-hidden");
 }
 
 function closePopUp() {
   popup.style.display = "none";
-  body.style.overflow = "";
-  body.classList.remove("overflow-hidden");
+  html.classList.remove("overflow-hidden");
 }
 
 const popupTriggerButtonsArray = Array.from(popupTriggerButtons);

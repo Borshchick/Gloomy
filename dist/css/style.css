@@ -382,6 +382,7 @@
   background-repeat: no-repeat;
   background-position: center 200px;
   padding-bottom: 50px;
+  padding-top: 15px;
   margin-top: -300px;
   z-index: 3;
 }
@@ -706,6 +707,8 @@
   width: 80%;
   max-width: 1217px;
   margin: auto;
+  padding-top: 60px;
+  margin-top: -50px;
 }
 .faq__tittle {
   font-size: 26px;
@@ -2592,6 +2595,13 @@
 .articles li::marker {
   padding-right: 15px;
 }
+.articles ul {
+  padding-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 .articles a {
   text-decoration: none;
   color: #0075FF;
@@ -2677,6 +2687,10 @@
   padding: 150px 0 200px 0;
   position: relative;
   z-index: 2;
+}
+.terms-main__wrapper a {
+  text-decoration: none;
+  color: white;
 }
 .terms-main h2 {
   color: white;
@@ -3661,5 +3675,6 @@ body, html {
   background: #F1F2F3;
   overflow-x: hidden;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=style.css.map */

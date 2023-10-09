@@ -214,12 +214,13 @@
     width: 100%;
   }
 }
-.main-home__video {
+.main-home__background {
   position: absolute;
   object-fit: cover;
   height: 83%;
+  width: 100%;
 }
-.main-home__video-cover {
+.main-home__background-cover {
   position: relative;
   width: 100%;
   bottom: 100px;
@@ -1954,6 +1955,7 @@
   position: absolute;
   object-fit: cover;
   height: 80%;
+  width: 100%;
 }
 .examples__video-cover {
   position: relative;
@@ -2066,6 +2068,7 @@
   position: absolute;
   object-fit: cover;
   height: 70%;
+  width: 100%;
 }
 .about__video-cover {
   position: relative;
@@ -2250,6 +2253,7 @@
   position: absolute;
   object-fit: cover;
   height: 60%;
+  width: 100%;
 }
 .contact-us__video-cover {
   width: 100%;
@@ -2469,6 +2473,7 @@
   position: absolute;
   object-fit: cover;
   height: 70%;
+  width: 100%;
 }
 .policy-main-page__video-cover {
   position: relative;
@@ -2670,6 +2675,7 @@
   position: absolute;
   height: 80%;
   object-fit: cover;
+  width: 100%;
 }
 .terms-main__video-cover {
   width: 100%;
